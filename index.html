@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+ 
+var date = new Date();
+
+var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+var theDay = date.getDay()
+
+var nowDay = dayNames[theDay]
+var nowHour = date.getHours()-12
+var nowMinut = date.getMinutes()
+var nowSec = date.getSeconds()
+
+var fulTime = nowHour +' PM' +" : "+ nowMinut +" : "+ nowSec
+
+document.write(`Sample is Output : Today is : ${nowDay} <br>` );
+document.write(`Current Time is : ${fulTime}`);
+
+
+document.write(`<br> <br>`)
+
+
+var currDate = date.getDate();
+var curMon = date.getMonth()+1;
+var curYear = date.getFullYear()
+document.write(currDate + "-" + curMon + "-" + curYear + ", ");
+document.write(currDate + "/" + curMon + "/" + curYear);
+var dat = new Date()
+    
+    var monthName = ['janaury','February','March','April','May','Jun','July','August','September','October','November','December']
+    
+     var month = dat.getMonth();
+   
+     var curr = monthName[month]
+     
+     var dayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday', 'Saturday']
+     
+     var day = dat.getDay()
+     var currDay = dayName[day]
+     
+     
+     alert(`Current Month : ${curr} || Today is : ${currDay}`)
+     
+     
+     if (currDay == dayName[0] || currDay== dayName[6]){
+       alert ('Today its Fun Day')
+     } else{
+       alert('Today its Not Fun Day')
+     }
+     
+  var datee = dat.getDate();
+  
+  if (15 >= datee) {
+   
+   alert('The fist fifteen Days of the Month')
+  } else {
+    alert('The Last Fifteen Days of the Month')
+  }
+
+
+
+
+var ajkidat = new Date()
+var ramadan = new Date(2025, 4, 21)
+
+
+
+
+var latetime = Math.floor((ramadan.getTime() - ajkidat.getTime() ) / (1000 * 60 * 60 * 24));
+
+
+alert(`${latetime} Days left 1st Ramadan`);
+
+
+var addhour = ajkidat.getHours()
+
+var plushour = addhour + 1;
+
+document.write(`${ajkidat}`)
+
+
+
+var agoyear = ajkidat.getFullYear()
+
+
+alert(agoyear - 100);
+
+
+
+var inputage = +prompt ('Enter your Age for calculate BirthYear')
+
+var birthYear = ajkidat.getFullYear() - inputage 
+
+
+document.write(`your Birthday Year is : ${birthYear}`);
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
